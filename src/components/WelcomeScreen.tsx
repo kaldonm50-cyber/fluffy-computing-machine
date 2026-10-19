@@ -1,52 +1,53 @@
-import { Send } from 'lucide-react';
+import React from 'react';
 
-interface WelcomeScreenProps {
-  input: string;
-  setInput: (value: string) => void;
-  handleSubmit: (e: React.FormEvent) => Promise<void>;
-  isLoading: boolean;
-}
+export const WelcomeScreen: React.FC = () => {
+  return (
+    <div className="welcome-container p-6 max-w-4xl mx-auto text-right" dir="rtl">
+      {/* الترويسة الرئيسية */}
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold mb-2">فندق بابل كاسل هاوس (Bubble Castle Boutique Hotel)</h1>
+        <p className="text-gray-600 text-lg">بإطلالة ساحرة ومباشرة على قلعة الكرك التاريخية</p>
+      </div>
 
-export const WelcomeScreen = ({ 
-  input, 
-  setInput, 
-  handleSubmit, 
-  isLoading 
-}: WelcomeScreenProps) => (
-  <div className="flex items-center justify-center flex-1 px-4">
-    <div className="w-full max-w-3xl mx-auto text-center">
-      <h1 className="mb-4 text-6xl font-bold text-transparent uppercase bg-gradient-to-r from-orange-500 to-red-600 bg-clip-text">
-        <span className="text-white">TanStack</span> Chat
-      </h1>
-      <p className="w-2/3 mx-auto mb-6 text-lg text-gray-400">
-        You can ask me about anything, I might or might not have a good
-        answer, but you can still ask.
-      </p>
-      <form onSubmit={handleSubmit}>
-        <div className="relative max-w-xl mx-auto">
-          <textarea
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === 'Enter' && !e.shiftKey) {
-                e.preventDefault()
-                handleSubmit(e)
-              }
-            }}
-            placeholder="Type something clever (or don't, we won't judge)..."
-            className="w-full py-3 pl-4 pr-12 overflow-hidden text-sm text-white placeholder-gray-400 border rounded-lg resize-none border-orange-500/20 bg-gray-800/50 focus:outline-none focus:ring-2 focus:ring-orange-500/50 focus:border-transparent"
-            rows={1}
-            style={{ minHeight: '88px' }}
-          />
-          <button
-            type="submit"
-            disabled={!input.trim() || isLoading}
-            className="absolute p-2 text-orange-500 transition-colors -translate-y-1/2 right-2 top-1/2 hover:text-orange-400 disabled:text-gray-500 focus:outline-none"
-          >
-            <Send className="w-4 h-4" />
-          </button>
+      {/* قسم الغرف والخيارات المتاحة */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        
+        {/* الغرفة المزدوجة */}
+        <div className="border rounded-xl p-5 shadow-sm bg-white border-amber-100 hover:shadow-md transition">
+          <h2 className="text-xl font-bold mb-2 text-amber-900">الغرفة المزدوجة (Double Room)</h2>
+          <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+            غرفة استثنائية ومريحة بمساحة واسعة (75 م²) تمتاز بإطلالة على برج الأسد، وتضم صالة أنيقة وتراساً بانورامياً مطلّاً على قلعة الكرك وكامل المدينة.
+          </p>
+          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 text-xs text-amber-900 font-medium">
+            ✨ <strong>مزايا الحجز المباشر:</strong> سعر تفضيلي يقل تلقائياً بدينارين عن منصة بوكينج، مع مياه معدنية ومشروبات ساخنة مجانية (شاي وكابتشينو).
+          </div>
         </div>
-      </form>
+
+        {/* الغرفة الثلاثية الفاخرة */}
+        <div className="border rounded-xl p-5 shadow-sm bg-white border-amber-100 hover:shadow-md transition">
+          <h2 className="text-xl font-bold mb-2 text-amber-900">الغرفة الثلاثية الفاخرة (Deluxe Triple)</h2>
+          <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+            مصممة لراحة الضيوف بمساحة 80 م² مع حمام عصري بتصميم راقٍ، وتحتوي على أجمل تراس في الفندق بإطلالة مباشرة وكاملة على قلعة الكرك والمدينة.
+          </p>
+          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 text-xs text-amber-900 font-medium">
+            ✨ <strong>مزايا الحجز المباشر:</strong> سعر تفضيلي يقل بدينارين عن المنصات الخارجية، وضيافة مجانية تشمل المياه المعدنية والمشروبات الساخنة.
+          </div>
+        </div>
+
+        {/* الجناح الفاخر */}
+        <div className="border rounded-xl p-5 shadow-sm bg-white border-amber-100 hover:shadow-md transition">
+          <h2 className="text-xl font-bold mb-2 text-amber-900">الجناح الفاخر (Suite - Code b1)</h2>
+          <p className="text-sm text-gray-700 mb-3 leading-relaxed">
+            جناح ملكي فاخر بمساحة 80 م² يتكون من غرفتي نوم مع مطبخ خاص وإطلالة خلابة ومباشرة على قلعة الكرك، يضم أنظمة إضاءة متعددة تناسب الجميع <em>(مكتمل 90% وجاري استكمال الموكيت)</em>.
+          </p>
+          <div className="bg-amber-50 p-3 rounded-lg border border-amber-200 text-xs text-amber-900 font-medium">
+            ✨ <strong>مزايا الحجز المباشر:</strong> السعر الأفضل بفارق دينارين عن المنصات، مع مياه معدنية ومشروبات ساخنة مجانية.
+          </div>
+        </div>
+
+      </div>
     </div>
-  </div>
-); 
+  );
+};
+
+export default WelcomeScreen;
