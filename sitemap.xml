@@ -2,8 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://bubblecastlehotel.com/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://bubblecastlehotel.com/rooms</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://bubblecastlehotel.com/contact</loc>
+    <lastmod>2026-10-19</lastmod>
   </url>
 </urlset>
