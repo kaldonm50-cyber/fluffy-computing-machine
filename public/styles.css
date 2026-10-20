@@ -1,4 +1,4 @@
-:root{
+:root {
   --night:#1d2a3a; --night-2:#2c3a4b; --stone:#c9a76a; --stone-d:#8a6f42;
   --sand:#f6f1e7; --sand-2:#ece3d2; --ink:#1f2328; --muted:#5d6470;
   --accent:#b5652b; --accent-d:#94501f; --line:#ddd2bd;
@@ -57,11 +57,10 @@ p{margin:0 0 1em}
 .hero-cta{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.6rem 0}
 .rating{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;color:var(--ink);font-size:.95rem}
 .stars{color:#d79a2b;letter-spacing:2px}
-.hero-art svg{width:100%;height:auto;border-radius:28px;box-shadow:0 30px 60px -30px rgba(29,42,58,.55)}
 
 /* facts */
 .facts{border-block:1px solid var(--line);background:var(--sand-2)}
-.facts-grid{display:grid;grid-template-columns:repeat(3,1fr)}
+.facts-grid{display:grid;grid-template-columns:repeat(4,1fr)}
 .fact{padding:1.6rem 1.2rem;display:flex;flex-direction:column;gap:.2rem}
 .fact + .fact{border-inline-start:1px solid var(--line)}
 .fact-k{font-family:var(--f-display);font-size:1.35rem;color:var(--night);font-weight:600}
@@ -94,7 +93,6 @@ p{margin:0 0 1em}
 .contact a{text-decoration:none}
 .map-wrap{border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);aspect-ratio:4/3;background:var(--sand-2)}
 .map-card{position:relative;display:block;text-decoration:none}
-.map-card svg{width:100%;height:100%;object-fit:cover}
 .map-label{position:absolute;inset-inline:1rem;bottom:1rem;background:rgba(29,42,58,.9);color:#fff;font-size:.9rem;padding:.6rem 1rem;border-radius:999px;text-align:center}
 
 .cta-band{background:var(--night);color:var(--sand);padding:clamp(3rem,7vw,5rem) 0}
@@ -112,6 +110,9 @@ p{margin:0 0 1em}
   .hero-grid,.location-grid{grid-template-columns:1fr}
   .cards{grid-template-columns:1fr 1fr}
   .card-feature{grid-column:span 2;grid-template-columns:1fr}
+  .booking-grid{grid-template-columns:1fr}
+  .facts-grid{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-inline-start:0}
 }
 @media (max-width:600px){
   .brand-text small{display:none}
@@ -119,6 +120,8 @@ p{margin:0 0 1em}
   .fact + .fact{border-inline-start:0;border-top:1px solid var(--line)}
   .card-feature{grid-column:span 1}
   .hero-cta .btn{flex:1 1 auto}
+  .hide-sm{display:none}
+  .row2{grid-template-columns:1fr}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
 
@@ -139,6 +142,19 @@ p{margin:0 0 1em}
 .book-form input:focus,.book-form select:focus,.book-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .form-error{margin:0;color:#a23a1a;font-size:.9rem}
-.facts-grid{grid-template-columns:repeat(4,1fr)}
-@media (max-width:900px){.booking-grid{grid-template-columns:1fr}.facts-grid{grid-template-columns:1fr 1fr}.fact:nth-child(3){border-inline-start:0}}
-@media (max-width:600px){.hide-sm{display:none}.row2{grid-template-columns:1fr}.facts-grid{grid-template-columns:1fr}}
+
+/* Correct image styling selectors to prevent missing image indicators */
+.hero-art img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -30px rgba(29, 42, 58, .55);
+}
+
+.map-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
