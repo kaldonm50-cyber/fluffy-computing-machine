@@ -3,35 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bubble Castle Boutique Hotel | فندق بابل كاسل البوتيكي</title>
-  <meta name="description" content="فندق بوتيك فاخر في الكرك، الأردن، بإطلالة مباشرة على قلعة الكرك التاريخية وبرج الأسد.">
-  <link rel="icon" href="favicon.svg">
-  <link rel="stylesheet" href="styles.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <!-- كود الـ Schema العالمي لمحركات البحث -->
+  <title>Bubble Castle Boutique Hotel | فندق بابل كاسل البوتيكي في الكرك</title>
+  <meta name="description" content="فندق بوتيك فاخر في الكرك، الأردن، بإطلالة مباشرة على قلعة الكرك التاريخية وبرج الأسد. إقامة مميزة، إطلالات بانورامية، وخدمة ضيافة راقية.">
+  <meta name="keywords" content="فندق بابل كاسل, Bubble Castle Hotel, فندق بوتيك الكرك, فنادق الكرك الأردن, قلعة الكرك, إقامة فاخرة الأردن">
+  <meta name="author" content="Bubble Castle Boutique Hotel">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="canonical" href="https://bubblecastlehotel.com/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/styles.css">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bubble Castle Boutique Hotel">
+  <meta property="og:title" content="Bubble Castle Boutique Hotel | فندق بابل كاسل البوتيكي">
+  <meta property="og:description" content="فندق بوتيك فاخر في الكرك، الأردن، بإطلالة مباشرة على قلعة الكرك التاريخية وبرج الأسد.">
+  <meta property="og:url" content="https://bubblecastlehotel.com/">
+  <meta property="og:image" content="https://bubblecastlehotel.com/hero-bg.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="إطلالة فندق بابل كاسل البوتيكي على قلعة الكرك">
+  <meta property="og:locale" content="ar_JO">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bubble Castle Boutique Hotel | فندق بابل كاسل البوتيكي">
+  <meta name="twitter:description" content="فندق بوتيك فاخر في الكرك، الأردن، بإطلالة مباشرة على قلعة الكرك التاريخية وبرج الأسد.">
+  <meta name="twitter:image" content="https://bubblecastlehotel.com/hero-bg.jpg">
+
+  <!-- Schema.org (Hotel & Rooms) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Hotel",
+    "@id": "https://bubblecastlehotel.com/#hotel",
     "name": "Bubble Castle Boutique Hotel",
     "alternateName": "فندق بابل كاسل بوتيك",
     "description": "An exclusive luxury boutique hotel in Al-Karak, Jordan, offering breathtaking direct panoramic views of the historic Karak Castle and Lion's Tower.",
-    "url": "https://bubblecastlehotel.com",
+    "url": "https://bubblecastlehotel.com/",
+    "image": [
+      "https://bubblecastlehotel.com/hero-bg.jpg",
+      "https://bubblecastlehotel.com/triple-room.jpg",
+      "https://bubblecastlehotel.com/double-room.jpg",
+      "https://bubblecastlehotel.com/suite-b1.jpg"
+    ],
     "telephone": "+962795711268",
+    "priceRange": "$$$",
+    "checkinTime": "14:00",
+    "checkoutTime": "12:00",
+    "petsAllowed": false,
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Al-Karak Highway, Near Castle Street",
       "addressLocality": "Al-Karak",
+      "addressRegion": "Karak Governorate",
+      "postalCode": "00000",
       "addressCountry": "JO"
-    }
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.1852,
+      "longitude": 35.7040
+    },
+    "hasMap": "https://www.google.com/maps/search/?api=1&query=Bubble+Castle+Boutique+Hotel+Al+Karak+Jordan",
+    "containsPlace": [
+      {
+        "@type": "HotelRoom",
+        "name": "Deluxe Double Room",
+        "description": "75 m² luxury double room with stunning Lion's Tower view.",
+        "floorSize": { "@type": "QuantitativeValue", "value": 75, "unitCode": "MTK" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Luxury Triple Room",
+        "description": "80 m² triple room featuring panoramic terrace and velvet ceiling.",
+        "floorSize": { "@type": "QuantitativeValue", "value": 80, "unitCode": "MTK" }
+      },
+      {
+        "@type": "HotelRoom",
+        "name": "Luxury Suite Code b1",
+        "description": "80 m² two-bedroom suite with private kitchen overlooking Karak Castle.",
+        "floorSize": { "@type": "QuantitativeValue", "value": 80, "unitCode": "MTK" }
+      }
+    ]
   }
   </script>
 </head>
 <body>
-  <!-- العنصر الأساسي الذي يعتمد عليه نظام React لتشغيل واجهة الفندق -->
   <div id="root"></div>
+  <noscript>
+    <p>لعرض موقع فندق بابل كاسل البوتيكي بشكل كامل، يرجى تفعيل JavaScript في المتصفح.</p>
+  </noscript>
 
-  <!-- ملف السكريبت التشغيلي للموقع -->
-  <script src="script.js"></script>
+  <script src="/script.js" defer></script>
 </body>
 </html>
