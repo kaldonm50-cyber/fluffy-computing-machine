@@ -141,7 +141,20 @@ p{margin:0 0 1em}
 .book-form input,.book-form select,.book-form textarea{font:inherit;font-size:1rem;padding:.7rem .8rem;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);width:100%}
 .book-form input:focus,.book-form select:focus,.book-form textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-.form-error{margin:0;color:#a23a1a;font-size:.9rem}
+
+/* Form Validation & Status Messages */
+.form-error {
+  color: #b91c1c;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.form-success {
+  color: #1b4332;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
 
 /* Correct image styling selectors to prevent missing image indicators */
 .hero-art img {
